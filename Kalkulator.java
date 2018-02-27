@@ -214,4 +214,50 @@ public class Kalkulator extends Wykres {
         });
         btnMnozenie.setFont(new Font("Arial", Font.BOLD, 18));
         getFrameKalkulatorStandardowy().getContentPane().add(btnMnozenie);
+//		Rz�d 4 ------------------------------------------
+        JButton btn1 = new JButton("1");
+        btn1.setBounds(10, 225, 50, 50);
+        btn1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+//				textField.setText(textField.getText());
+                EnterNumber = textField.getText() + btn1.getText();
+                textField.setText(EnterNumber);
+            }
+        });
+        btn1.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btn1);
+
+        JButton btn2 = new JButton("2");
+        btn2.setBounds(65, 225, 50, 50);
+        btn2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                EnterNumber = textField.getText() + btn2.getText();
+                textField.setText(EnterNumber);
+            }
+        });
+        btn2.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btn2);
+
+        JButton btn3 = new JButton("3");
+        btn3.setBounds(120, 225, 50, 50);
+        btn3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                EnterNumber = textField.getText() + btn3.getText();
+                textField.setText(EnterNumber);
+            }
+        });
+        btn3.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btn3);
+
+        JButton btnDzielenie = new JButton("/");
+        btnDzielenie.setBounds(175, 225, 50, 50);
+        btnDzielenie.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                firstnumber = Double.parseDouble(textField.getText());
+                textField.setText("");
+                operations = "/";
+            }
+        });
+        btnDzielenie.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnDzielenie);
     }

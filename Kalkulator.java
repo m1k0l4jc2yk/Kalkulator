@@ -120,4 +120,52 @@ public class Kalkulator extends Wykres {
         });
         btnPlus.setFont(new Font("Arial", Font.BOLD, 18));
         getFrameKalkulatorStandardowy().getContentPane().add(btnPlus);
+//		Rz�d 2 ------------------------------------------
+        JButton btn7 = new JButton("7");
+        btn7.setBounds(10, 115, 50, 50);
+        btn7.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                EnterNumber = textField.getText() + btn7.getText();
+                textField.setText(EnterNumber);
+
+            }
+        });
+        btn7.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btn7);
+
+        JButton btn8 = new JButton("8");
+        btn8.setBounds(65, 115, 50, 50);
+        btn8.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                EnterNumber = textField.getText() + btn8.getText();
+                textField.setText(EnterNumber);
+            }
+        });
+        btn8.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btn8);
+
+        JButton btn9 = new JButton("9");
+        btn9.setBounds(120, 115, 50, 50);
+        btn9.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                EnterNumber = textField.getText() + btn9.getText();
+                textField.setText(EnterNumber);
+            }
+        });
+        btn9.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btn9);
+
+        JButton btnMinus = new JButton("-");
+        btnMinus.setBounds(175, 115, 50, 50);
+        btnMinus.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                firstnumber = Double.parseDouble(textField.getText());
+                textField.setText("");
+                operations = "-";
+
+            }
+        });
+        btnMinus.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnMinus);
     }

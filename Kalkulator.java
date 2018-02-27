@@ -40,3 +40,30 @@ public class Kalkulator extends Wykres {
     private JTextField txtPodajWarto;
     private JTextField txtWartoWZ;
 
+    /**
+     * Create the application.
+     */
+    public Kalkulator() {
+        initialize();
+    }
+
+    /**
+     * Initialize the contents of the frame.
+     */
+    private void initialize() {
+        frameKalkulatorStandardowy = new JFrame();
+        frameKalkulatorStandardowy.getContentPane().setBackground(Color.BLACK);
+        frameKalkulatorStandardowy.setTitle("Kalkulator Walutowy");
+        frameKalkulatorStandardowy.setBounds(100, 100, 650, 375);
+        frameKalkulatorStandardowy.setVisible(true);
+        frameKalkulatorStandardowy.setBackground(Color.WHITE);
+        frameKalkulatorStandardowy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frameKalkulatorStandardowy.getContentPane().setLayout(null);
+
+
+        textField = new JTextField();
+        textField.setBounds(10, 30, 215, 25);
+        textField.setHorizontalAlignment(SwingConstants.RIGHT);
+        getFrameKalkulatorStandardowy().getContentPane().add(textField);
+        textField.setColumns(10);
+    }

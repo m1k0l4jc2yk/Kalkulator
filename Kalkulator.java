@@ -260,4 +260,76 @@ public class Kalkulator extends Wykres {
         });
         btnDzielenie.setFont(new Font("Arial", Font.BOLD, 18));
         getFrameKalkulatorStandardowy().getContentPane().add(btnDzielenie);
+//		Rz�d 5 ------------------------------------------
+        JButton btn0 = new JButton("0");
+        btn0.setBounds(10, 280, 50, 50);
+        btn0.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String EnterNumber = textField.getText() + btn0.getText();
+                textField.setText(EnterNumber);
+            }
+        });
+        btn0.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btn0);
+
+        JButton btnKropka = new JButton(".");
+        btnKropka.setBounds(65, 280, 50, 50);
+        btnKropka.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (!textField.getText().contains(".")) {
+                    textField.setText(textField.getText() + btnKropka.getText());
+                }
+            }
+        });
+        btnKropka.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnKropka);
+
+        JButton btnPlusMinus = new JButton("\u00B1");
+        btnPlusMinus.setBounds(120, 280, 50, 50);
+        btnPlusMinus.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double ops = Double.parseDouble(String.valueOf(textField.getText()));
+                ops = ops * (-1);
+                textField.setText(String.valueOf(ops));
+                ops = firstnumber;
+            }
+        });
+        btnPlusMinus.setFont(new Font("Tahoma", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnPlusMinus);
+
+        JButton btnRowne = new JButton("=");
+        btnRowne.setBounds(175, 280, 50, 50);
+        btnRowne.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                String answer;
+                secondnumber = Double.parseDouble(textField.getText());
+                if (operations == "+") {
+                    resoult = firstnumber + secondnumber;
+                    answer = String.valueOf(resoult);
+                    textField.setText(answer);
+                } else if (operations == "-") {
+                    resoult = firstnumber - secondnumber;
+                    answer = String.valueOf(resoult);
+                    textField.setText(answer);
+
+                } else if (operations == "*") {
+                    resoult = firstnumber * secondnumber;
+                    answer = String.valueOf(resoult);
+                    textField.setText(answer);
+
+                } else if (operations == "/") {
+                    resoult = firstnumber / secondnumber;
+                    answer = String.valueOf(resoult);
+                    textField.setText(answer);
+
+                }
+                secondnumber = Double.parseDouble(textField.getText());
+
+            }
+        });
+        btnRowne.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnRowne);
+
     }

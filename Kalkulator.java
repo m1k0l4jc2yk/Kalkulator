@@ -168,4 +168,50 @@ public class Kalkulator extends Wykres {
         });
         btnMinus.setFont(new Font("Arial", Font.BOLD, 18));
         getFrameKalkulatorStandardowy().getContentPane().add(btnMinus);
+//		Rz�d 3 ------------------------------------------
+        JButton btn4 = new JButton("4");
+        btn4.setBounds(10, 170, 50, 50);
+        btn4.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                EnterNumber = textField.getText() + btn4.getText();
+                textField.setText(EnterNumber);
+            }
+        });
+        btn4.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btn4);
+
+        JButton btn5 = new JButton("5");
+        btn5.setBounds(65, 170, 50, 50);
+        btn5.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                EnterNumber = textField.getText() + btn5.getText();
+                textField.setText(EnterNumber);
+            }
+        });
+        btn5.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btn5);
+
+        JButton btn6 = new JButton("6");
+        btn6.setBounds(120, 170, 50, 50);
+        btn6.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                EnterNumber = textField.getText() + btn6.getText();
+                textField.setText(EnterNumber);
+            }
+        });
+        btn6.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btn6);
+
+        JButton btnMnozenie = new JButton("*");
+        btnMnozenie.setBounds(175, 170, 50, 50);
+        btnMnozenie.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                firstnumber = Double.parseDouble(textField.getText());
+                textField.setText("");
+                operations = "*";
+
+            }
+        });
+        btnMnozenie.setFont(new Font("Arial", Font.BOLD, 18));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnMnozenie);
     }

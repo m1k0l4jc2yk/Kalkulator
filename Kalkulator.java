@@ -462,4 +462,73 @@ public class Kalkulator extends Wykres {
         buttonX3.setFont(new Font("Arial", Font.BOLD, 8));
         getFrameKalkulatorStandardowy().getContentPane().add(buttonX3);
 
+        JButton btnSin = new JButton("Sin");
+        btnSin.setBounds(295, 60, 50, 50);
+        btnSin.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double ops = Double.parseDouble(String.valueOf(textField.getText()));
+                ops = Math.sin(ops);
+                textField.setText(String.valueOf(ops));
+                ops = firstnumber;
+            }
+        });
+        btnSin.setFont(new Font("Arial", Font.BOLD, 8));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnSin);
+
+        JButton btnCos = new JButton("Cos");
+        btnCos.setBounds(295, 115, 50, 50);
+        btnCos.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double ops = Double.parseDouble(String.valueOf(textField.getText()));
+                ops = Math.cos(ops);
+                textField.setText(String.valueOf(ops));
+                ops = firstnumber;
+            }
+        });
+        btnCos.setFont(new Font("Arial", Font.BOLD, 8));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnCos);
+
+        JButton btnTan = new JButton("Tan");
+        btnTan.setBounds(295, 170, 50, 50);
+        btnTan.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double ops = Double.parseDouble(String.valueOf(textField.getText()));
+                ops = Math.tan(ops);
+                textField.setText(String.valueOf(ops));
+                ops = firstnumber;
+            }
+        });
+        btnTan.setFont(new Font("Arial", Font.BOLD, 8));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnTan);
+
+        JButton btnBin = new JButton("Bin");
+        btnBin.setBounds(355, 61, 50, 50);
+        btnBin.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                int a = Integer.parseInt(textField.getText());
+                textField.setText(Integer.toString(a, 2));
+            }
+        });
+        btnBin.setFont(new Font("Arial", Font.BOLD, 8));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnBin);
+
+        JButton btnx = new JButton("Rou");
+        btnx.setBounds(295, 280, 50, 50);
+        btnx.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double ops = Double.parseDouble(String.valueOf(textField.getText()));
+                ops = Math.round(ops);
+                textField.setText(String.valueOf(ops));
+                ops = firstnumber;
+
+            }
+        });
+        btnx.setFont(new Font("Arial", Font.BOLD, 8));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnx);
+
     }

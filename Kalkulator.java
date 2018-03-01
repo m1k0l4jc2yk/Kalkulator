@@ -531,4 +531,74 @@ public class Kalkulator extends Wykres {
         btnx.setFont(new Font("Arial", Font.BOLD, 8));
         getFrameKalkulatorStandardowy().getContentPane().add(btnx);
 
+        JButton buttonPi2 = new JButton("2*\u03C0");
+        buttonPi2.setBounds(295, 225, 50, 50);
+        buttonPi2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double ops;
+                ops = (3.14159265359) * 2;
+                textField.setText(String.valueOf(ops));
+                ops = firstnumber;
+
+            }
+
+        });
+        buttonPi2.setFont(new Font("Arial", Font.BOLD, 8));
+        getFrameKalkulatorStandardowy().getContentPane().add(buttonPi2);
+
+        JButton btnHex = new JButton("Hex");
+        btnHex.setBounds(355, 115, 50, 50);
+        btnHex.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                int a = Integer.parseInt(textField.getText());
+                textField.setText(Integer.toString(a, 16));
+
+            }
+        });
+        btnHex.setFont(new Font("Arial", Font.BOLD, 8));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnHex);
+
+        JButton btnOct = new JButton("Oct");
+        btnOct.setBounds(355, 170, 50, 50);
+        btnOct.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                int a = Integer.parseInt(textField.getText());
+                textField.setText(Integer.toString(a, 8));
+
+            }
+        });
+        btnOct.setFont(new Font("Arial", Font.BOLD, 8));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnOct);
+
+        JButton btnPierwiastek = new JButton("\u221A");
+        btnPierwiastek.setBounds(355, 225, 50, 50);
+        btnPierwiastek.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double ops = Double.parseDouble(String.valueOf(textField.getText()));
+                ops = Math.sqrt(ops);
+                textField.setText(String.valueOf(ops));
+                ops = firstnumber;
+            }
+        });
+        btnPierwiastek.setFont(new Font("Arial", Font.BOLD, 12));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnPierwiastek);
+
+        JButton btnMod = new JButton("lnx");
+        btnMod.setBounds(355, 280, 50, 50);
+        btnMod.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double ops = Double.parseDouble(String.valueOf(textField.getText()));
+                ops = Math.log10(ops);
+                textField.setText(String.valueOf(ops));
+                ops = firstnumber;
+            }
+        });
+        btnMod.setFont(new Font("Arial", Font.BOLD, 7));
+        getFrameKalkulatorStandardowy().getContentPane().add(btnMod);
+
     }

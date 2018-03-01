@@ -391,4 +391,75 @@ public class Kalkulator extends Wykres {
         });
         mnWidok.add(mntmWyjcie);
 
+        JButton buttonLog = new JButton("Log");
+        buttonLog.setBounds(235, 60, 50, 50);
+        buttonLog.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double ops = Double.parseDouble(String.valueOf(textField.getText()));
+                ops = Math.log(ops);
+                textField.setText(String.valueOf(ops));
+                ops = firstnumber;
+            }
+        });
+        buttonLog.setFont(new Font("Arial", Font.BOLD, 8));
+        getFrameKalkulatorStandardowy().getContentPane().add(buttonLog);
+
+        JButton buttonPI = new JButton("\u03C0");
+        buttonPI.setBounds(235, 115, 50, 50);
+        buttonPI.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double ops;
+                ops = 3.14159265359;
+                textField.setText(String.valueOf(ops));
+                ops = firstnumber;
+
+            }
+        });
+        buttonPI.setFont(new Font("Arial", Font.BOLD, 10));
+        getFrameKalkulatorStandardowy().getContentPane().add(buttonPI);
+
+        JButton buttonX1 = new JButton("x^y");
+        buttonX1.setBounds(235, 170, 50, 50);
+        buttonX1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double ops = Double.parseDouble(String.valueOf(textField.getText()));
+                ops = Math.pow(ops, ops);
+                textField.setText(String.valueOf(ops));
+                ops = firstnumber;
+            }
+        });
+        buttonX1.setFont(new Font("Arial", Font.BOLD, 8));
+        getFrameKalkulatorStandardowy().getContentPane().add(buttonX1);
+
+        JButton buttonX2 = new JButton("x^2");
+        buttonX2.setBounds(235, 225, 50, 50);
+        buttonX2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double ops = Double.parseDouble(String.valueOf(textField.getText()));
+                ops = (ops * ops);
+                textField.setText(String.valueOf(ops));
+                ops = firstnumber;
+            }
+        });
+        buttonX2.setFont(new Font("Arial", Font.BOLD, 8));
+        getFrameKalkulatorStandardowy().getContentPane().add(buttonX2);
+
+        JButton buttonX3 = new JButton("x^3");
+        buttonX3.setBounds(235, 280, 50, 50);
+        buttonX3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double ops = Double.parseDouble(String.valueOf(textField.getText()));
+                ops = (ops * ops * ops);
+                textField.setText(String.valueOf(ops));
+                ops = firstnumber;
+            }
+        });
+        buttonX3.setFont(new Font("Arial", Font.BOLD, 8));
+        getFrameKalkulatorStandardowy().getContentPane().add(buttonX3);
+
     }

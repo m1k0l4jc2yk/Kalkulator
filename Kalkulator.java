@@ -332,4 +332,63 @@ public class Kalkulator extends Wykres {
         btnRowne.setFont(new Font("Arial", Font.BOLD, 18));
         getFrameKalkulatorStandardowy().getContentPane().add(btnRowne);
 
+        JPanel panel = new JPanel();
+        panel.setBounds(10, 5, 614, 18);
+        getFrameKalkulatorStandardowy().getContentPane().add(panel);
+        panel.setLayout(null);
+
+        JMenuBar menuBar = new JMenuBar();
+        menuBar.setFont(new Font("Arial", Font.BOLD, 12));
+        menuBar.setBounds(0, 0, 43, 21);
+        panel.add(menuBar);
+
+        JMenu mnWidok = new JMenu("Widok");
+        mnWidok.setFont(new Font("Segoe UI", Font.BOLD, 12));
+        mnWidok.setHorizontalAlignment(SwingConstants.CENTER);
+        menuBar.add(mnWidok);
+
+        JMenuItem mntmStandard = new JMenuItem("Standardowy");
+        mntmStandard.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                getFrameKalkulatorStandardowy().setTitle("Kalkulator Standardowy");
+                getFrameKalkulatorStandardowy().setBounds(100, 100, 250, 375);
+                textField.setBounds(10, 25, 215, 30);
+                panel.setBounds(10, 5, 215, 18);
+            }
+        });
+        mnWidok.add(mntmStandard);
+
+        JMenuItem mntmNaukowy = new JMenuItem("Naukowy");
+        mntmNaukowy.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                getFrameKalkulatorStandardowy().setTitle("Kalkulator Naukowy");
+                getFrameKalkulatorStandardowy().setBounds(100, 100, 430, 375);
+                textField.setBounds(10, 25, 395, 30);
+                panel.setBounds(10, 5, 395, 18);
+            }
+        });
+        mnWidok.add(mntmNaukowy);
+
+        JMenuItem mntmWalutowy = new JMenuItem("Walutowy");
+        mntmWalutowy.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                getFrameKalkulatorStandardowy().setTitle("Kalkulator Walutowy");
+                getFrameKalkulatorStandardowy().setBounds(100, 100, 650, 375);
+                textField.setBounds(10, 25, 395, 30);
+                panel.setBounds(10, 5, 614, 18);
+            }
+        });
+        mnWidok.add(mntmWalutowy);
+
+        JMenuItem mntmWyjcie = new JMenuItem("Wyj\u015Bcie");
+        mntmWyjcie.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
+        mnWidok.add(mntmWyjcie);
+
     }

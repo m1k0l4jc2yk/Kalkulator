@@ -840,4 +840,34 @@ public class Kalkulator extends Wykres {
         getFrameKalkulatorStandardowy().getContentPane().add(btnNewButton);
 
 
+        JButton btnC = new JButton("Wyczy\u015B\u0107");
+        btnC.setBounds(415, 308, 110, 22);
+        btnC.setFont(new Font("Tahoma", Font.PLAIN, 11));
+        btnC.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                textField1.setText(null);
+                textField2.setText(null);
+                jCombo.setModel(new DefaultComboBoxModel(new String[]{"WYBIERZ WALUT�...", "USA", "EURO", "GBP", "CAD", "AUD", "CHF", "HUF"}));
+                textPane.setText(null);
+                textPane2.setText(null);
+                srednia = 0;
+                srednia2 = 0;
+            }
+        });
+        getFrameKalkulatorStandardowy().getContentPane().add(btnC);
+
+        textField1 = new JTextField();
+        textField1.setToolTipText("");
+        textField1.setBounds(530, 100, 94, 30);
+        textField1.setHorizontalAlignment(SwingConstants.CENTER);
+        getFrameKalkulatorStandardowy().getContentPane().add(textField1);
+        textField1.setColumns(10);
+
+        textField2 = new JTextField();
+        textField2.setBounds(530, 135, 94, 30);
+        textField2.setHorizontalAlignment(SwingConstants.CENTER);
+        textField2.setColumns(10);
+        getFrameKalkulatorStandardowy().getContentPane().add(textField2);
+
     }

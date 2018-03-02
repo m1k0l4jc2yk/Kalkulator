@@ -601,4 +601,32 @@ public class Kalkulator extends Wykres {
         btnMod.setFont(new Font("Arial", Font.BOLD, 7));
         getFrameKalkulatorStandardowy().getContentPane().add(btnMod);
 
+        JComboBox jCombo = new JComboBox();
+        jCombo.setBounds(415, 60, 209, 34);
+        jCombo.setFont(new Font("Arial", Font.BOLD, 12));
+        jCombo.setModel(new DefaultComboBoxModel(new String[]{"WYBIERZ WALUT�...", "USA", "EURO", "GBP", "CAD", "AUD", "CHF", "HUF"}));
+        getFrameKalkulatorStandardowy().getContentPane().add(jCombo);
+
+        txtKalkulatorWalutowy = new JTextField();
+        txtKalkulatorWalutowy.setBounds(415, 30, 209, 25);
+        txtKalkulatorWalutowy.setForeground(Color.WHITE);
+        txtKalkulatorWalutowy.setBackground(Color.BLACK);
+        txtKalkulatorWalutowy.setHorizontalAlignment(SwingConstants.CENTER);
+        txtKalkulatorWalutowy.setFont(new Font("Arial", Font.BOLD, 12));
+        txtKalkulatorWalutowy.setText("KALKULATOR WALUTOWY");
+        getFrameKalkulatorStandardowy().getContentPane().add(txtKalkulatorWalutowy);
+        txtKalkulatorWalutowy.setColumns(10);
+
+        JTextPane textPane = new JTextPane();
+        textPane.setBounds(415, 170, 209, 75);
+        textPane.setFont(new Font("Tahoma", Font.BOLD, 10));
+        textPane.setForeground(Color.BLACK);
+        frameKalkulatorStandardowy.getContentPane().add(textPane);
+
+        JTextPane textPane2 = new JTextPane();
+        textPane2.setBounds(415, 250, 209, 25);
+        textPane2.setForeground(new Color(0, 128, 0));
+        textPane2.setFont(new Font("Tahoma", Font.BOLD, 11));
+        frameKalkulatorStandardowy.getContentPane().add(textPane2);
+
     }

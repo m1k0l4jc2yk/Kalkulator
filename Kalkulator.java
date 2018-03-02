@@ -629,4 +629,215 @@ public class Kalkulator extends Wykres {
         textPane2.setFont(new Font("Tahoma", Font.BOLD, 11));
         frameKalkulatorStandardowy.getContentPane().add(textPane2);
 
+        JButton btnNewButton = new JButton("Konwertuj");
+        btnNewButton.setBounds(415, 280, 110, 20);
+        btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
+        btnNewButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                double Polski_Zloty = Double.parseDouble(textField1.getText());
+                if (jCombo.getSelectedItem().equals("USA")) {
+                    String Convert1 = String.format("%.2f", Polski_Zloty * UsaDolar);
+                    textField2.setText(Convert1 + "z�");
+                    double srednia = 0;
+                    double srednia2 = 0;
+
+                    double[] usa = {3.464, 3.455, 3.345, 3.4551, 3.445, 3.465, 3.465, 3.472, 3.482, 3.485};
+
+                    double[] usa2 = {3.441, 3.443, 3.442, 3.451, 3.452, 3.453, 3.455, 3.449, 3.451, 3.442, 3.464, 3.455, 3.345, 3.4551, 3.445, 3.465, 3.465, 3.472, 3.482, 3.485};
+
+
+                    for (int i = 0; i < usa.length; i++) {
+                        srednia = srednia + usa[i] / usa.length;
+                    }
+
+                    for (int i = 0; i < usa2.length; i++) {
+                        srednia2 = srednia2 + usa2[i] / usa2.length;
+
+                    }
+
+                    if (srednia <= usa[9] & srednia >= srednia2) {
+                        textPane.setText("�rednia mniejsza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + usa[9] + "\nZmiana kursu = " + String.format("%.3f", usa2[19] - usa2[0]));
+                        textPane2.setText("Warto Inwestowa� w walut� USA !!!");
+
+
+                    } else {
+                        textPane.setText("�rednia wi�ksza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + usa[9] + "\nZmiana kursu = " + String.format("%.3f", usa2[19] - usa2[0]));
+                        textPane2.setText("Nie inwestuj w walut� USA");
+
+                    }
+
+                } else if (jCombo.getSelectedItem().equals("EURO")) {
+                    String Convert1 = String.format("%.2f", Polski_Zloty * Euro);
+                    textField2.setText(Convert1 + "z�");
+                    double srednia = 0;
+                    double srednia2 = 0;
+
+                    double[] euro = {4.146, 4.148, 4.150, 4.161, 4.158, 4.154, 4.159, 4.173, 4.202, 4.184};
+
+                    double[] euro2 = {4.182, 4.173, 4.166, 4.175, 4.169, 4.171, 4.163, 4.149, 4.147, 4.142, 4.146, 4.148, 4.150, 4.161, 4.158, 4.154, 4.159, 4.173, 4.202, 4.184};
+
+                    for (int i = 0; i < euro.length; i++) {
+                        srednia = srednia + euro[i] / euro.length;
+                    }
+
+                    for (int i = 0; i < euro2.length; i++) {
+                        srednia2 = srednia2 + euro2[i] / euro2.length;
+
+                    }
+
+                    if (srednia <= euro[9] & srednia >= srednia2) {
+                        textPane.setText("�rednia mniejsza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + euro[9] + "\nZmiana kursu = " + String.format("%.3f", euro2[19] - euro2[0]));
+                        textPane2.setText("Warto Inwestowa� w walut� EURO !!!");
+
+                    } else {
+                        textPane.setText("�rednia wi�ksza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + euro[9] + "\nZmiana kursu = " + String.format("%.3f", euro2[19] - euro2[0]));
+                        textPane2.setText("Nie inwestuj w walut� EURO");
+                    }
+                } else if (jCombo.getSelectedItem().equals("GBP")) {
+                    String Convert1 = String.format("%.2f", Polski_Zloty * GrpBrytania);
+                    textField2.setText(Convert1 + "z�");
+                    double srednia = 0;
+                    double srednia2 = 0;
+
+                    double[] gbp = {4.706, 4.707, 4.751, 4.738, 4.711, 4.687, 4.688, 4.729, 4.769, 4.724};
+
+                    double[] gbp2 = {4.706, 4.705, 4.721, 4.730, 4.730, 4.752, 4.756, 4.768, 4.748, 4.708, 4.706, 4.707, 4.751, 4.738, 4.711, 4.687, 4.688, 4.729, 4.769, 4.724};
+
+
+                    for (int i = 0; i < gbp.length; i++) {
+                        srednia = srednia + gbp[i] / gbp.length;
+                    }
+
+                    for (int i = 0; i < gbp2.length; i++) {
+                        srednia2 = srednia2 + gbp2[i] / gbp2.length;
+
+                    }
+
+                    if (srednia <= gbp[9] & srednia >= srednia2) {
+                        textPane.setText("�rednia mniejsza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + gbp[9] + "\nZmiana kursu = " + String.format("%.3f", gbp2[19] - gbp2[0]));
+                        textPane2.setText("Warto Inwestowa� w walut� GBP !!!");
+
+                    } else {
+                        textPane.setText("�rednia wi�ksza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + gbp[9] + "\nZmiana kursu = " + String.format("%.3f", gbp2[19] - gbp2[0]));
+                        textPane2.setText("Nie inwestuj w walut� GBP");
+                    }
+                } else if (jCombo.getSelectedItem().equals("CAD")) {
+                    String Convert1 = String.format("%.2f", Polski_Zloty * CadCanada);
+                    textField2.setText(Convert1 + "z�");
+                    double srednia = 0;
+                    double srednia2 = 0;
+
+                    double[] cad = {2.712, 2.710, 2.711, 2.709, 2.690, 2.674, 2.691, 2.709, 2.720, 2.714};
+
+                    double[] cad2 = {2.750, 2.739, 2.742, 2.739, 2.728, 2.731, 2.731, 2.711, 2.703, 2.701, 2.712, 2.710, 2.711, 2.709, 2.690, 2.674, 2.691, 2.709, 2.720, 2.714};
+
+
+                    for (int i = 0; i < cad.length; i++) {
+                        srednia = srednia + cad[i] / cad.length;
+                    }
+
+                    for (int i = 0; i < cad2.length; i++) {
+                        srednia2 = srednia2 + cad2[i] / cad2.length;
+
+                    }
+
+                    if (srednia <= cad[9] & srednia >= srednia2) {
+                        textPane.setText("�rednia mniejsza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + cad[9] + "\nZmiana kursu = " + String.format("%.3f", cad2[19] - cad2[0]));
+                        textPane2.setText("Warto Inwestowa� w walut� CAD !!!");
+
+                    } else {
+                        textPane.setText("�rednia wi�ksza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + cad[9] + "\nZmiana kursu = " + String.format("%.3f", cad2[19] - cad2[0]));
+                        textPane2.setText("Nie inwestuj w walut� CAD");
+                    }
+                } else if (jCombo.getSelectedItem().equals("AUD")) {
+                    String Convert1 = String.format("%.2f", Polski_Zloty * AudAustralia);
+                    textField2.setText(Convert1 + "z�");
+                    double srednia = 0;
+                    double srednia2 = 0;
+
+                    double[] aud = {2.703, 2.697, 2.703, 2.672, 2.663, 2.652, 2.636, 2.665, 2.671, 2.668};
+
+                    double[] aud2 = {2.718, 2.720, 2.721, 2.727, 2.726, 2.715, 2.718, 2.698, 2.690, 2.699, 2.703, 2.697, 2.703, 2.672, 2.663, 2.652, 2.636, 2.665, 2.671, 2.668};
+
+
+                    for (int i = 0; i < aud.length; i++) {
+                        srednia = srednia + aud[i] / aud.length;
+                    }
+
+                    for (int i = 0; i < aud2.length; i++) {
+                        srednia2 = srednia2 + aud2[i] / aud2.length;
+
+                    }
+
+                    if (srednia <= aud[9] & srednia >= srednia2) {
+                        textPane.setText("�rednia mniejsza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + aud[9] + "\nZmiana kursu = " + String.format("%.3f", aud2[19] - aud2[0]));
+                        textPane2.setText("Warto Inwestowa� w walut� AUD !!!");
+
+                    } else {
+                        textPane.setText("�rednia wi�ksza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + aud[9] + "\nZmiana kursu = " + String.format("%.3f", aud2[19] - aud2[0]));
+                        textPane2.setText("Nie inwestuj w walut� AUD");
+                    }
+                } else if (jCombo.getSelectedItem().equals("CHF")) {
+                    String Convert1 = String.format("%.2f", Polski_Zloty * ChfSzwajcaria);
+                    textField2.setText(Convert1 + "z�");
+                    double srednia = 0;
+                    double srednia2 = 0;
+
+                    double[] chf = {3.580, 3.575, 3.580, 3.588, 3.588, 3.585, 3.590, 3.605, 3.650, 3.638};
+
+                    double[] chf2 = {3.542, 3.539, 3.547, 3.557, 3.547, 3.539, 3.546, 3.547, 3.564, 3.562, 3.580, 3.575, 3.580, 3.588, 3.588, 3.585, 3.590, 3.605, 3.650, 3.638};
+
+
+                    for (int i = 0; i < chf.length; i++) {
+                        srednia = srednia + chf[i] / chf.length;
+                    }
+
+                    for (int i = 0; i < chf2.length; i++) {
+                        srednia2 = srednia2 + chf2[i] / chf2.length;
+
+                    }
+
+                    if (srednia <= chf[9] & srednia >= srednia2) {
+                        textPane.setText("�rednia mniejsza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + chf[9] + "\nZmiana kursu = " + String.format("%.3f", chf2[19] - chf2[0]));
+                        textPane2.setText("Warto Inwestowa� w walut� CHF !!!");
+
+                    } else {
+                        textPane.setText("�rednia mniejsza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + chf[9] + "\nZmiana kursu = " + String.format("%.3f", chf2[19] - chf2[0]));
+                        textPane2.setText("Nie inwestuj w walut� CHF");
+                    }
+                } else if (jCombo.getSelectedItem().equals("HUF")) {
+                    String Convert1 = String.format("%.2f", Polski_Zloty * HufWegry);
+                    textField2.setText(Convert1 + "z�");
+                    double srednia = 0;
+                    double srednia2 = 0;
+
+                    double[] huf = {1.337, 1.335, 1.338, 1.345, 1.341, 1.339, 1.341, 1.341, 1.346, 1.341};
+
+                    double[] huf2 = {1.353, 1.350, 1.351, 1.349, 1.347, 1.345, 1.347, 1.341, 1.338, 1.338, 1.337, 1.335, 1.338, 1.345, 1.341, 1.339, 1.341, 1.341, 1.346, 1.341};
+
+
+                    for (int i = 0; i < huf.length; i++) {
+                        srednia = srednia + huf[i] / huf.length;
+                    }
+
+                    for (int i = 0; i < huf2.length; i++) {
+                        srednia2 = srednia2 + huf2[i] / huf2.length;
+
+                    }
+
+                    if (srednia <= huf[9] & srednia >= srednia2) {
+                        textPane.setText("�rednia mniejsza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + huf[9] + "\nZmiana kursu = " + String.format("%.3f", huf2[19] - huf2[0]));
+                        textPane2.setText("Warto Inwestowa� w walut� HUF !!!");
+
+                    } else {
+                        textPane.setText("�rednia mniejsza od ostatniej warto�ci\n�rednia (10) = " + String.format("%.3f", srednia) + "\n�rednia (20) = " + String.format("%.3f", srednia2) + "\nOstatnia warto�� kursu = " + huf[9] + "\nZmiana kursu = " + String.format("%.3f", huf2[19] - huf2[0]));
+                        textPane2.setText("Nie inwestuj w walut� HUF");
+                    }
+                }
+            }
+        });
+        getFrameKalkulatorStandardowy().getContentPane().add(btnNewButton);
+
+
     }

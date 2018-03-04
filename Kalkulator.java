@@ -906,4 +906,27 @@ public class Kalkulator extends Wykres {
 
             }
         });
+        frameKalkulatorStandardowy.getContentPane().add(tglbtnNewToggleButton);
+
+        txtPodajWarto = new JTextField();
+        txtPodajWarto.setText("Podaj Warto\u015B\u0107");
+        txtPodajWarto.setHorizontalAlignment(SwingConstants.CENTER);
+        txtPodajWarto.setForeground(Color.WHITE);
+        txtPodajWarto.setFont(new Font("Arial", Font.BOLD, 12));
+        txtPodajWarto.setColumns(10);
+        txtPodajWarto.setBackground(Color.BLACK);
+        txtPodajWarto.setBounds(415, 100, 110, 30);
+        frameKalkulatorStandardowy.getContentPane().add(txtPodajWarto);
+
+        txtWartoWZ = new JTextField();
+        txtWartoWZ.setText("Warto\u015B\u0107 w PLN = ");
+        txtWartoWZ.setHorizontalAlignment(SwingConstants.CENTER);
+        txtWartoWZ.setForeground(Color.WHITE);
+        txtWartoWZ.setFont(new Font("Arial", Font.BOLD, 12));
+        txtWartoWZ.setColumns(10);
+        txtWartoWZ.setBackground(Color.BLACK);
+        txtWartoWZ.setBounds(415, 135, 110, 30);
+        frameKalkulatorStandardowy.getContentPane().add(txtWartoWZ);
+
+
     }

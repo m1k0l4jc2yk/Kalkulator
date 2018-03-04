@@ -929,4 +929,29 @@ public class Kalkulator extends Wykres {
         frameKalkulatorStandardowy.getContentPane().add(txtWartoWZ);
 
 
+        JLabel lblNewLabel = new JLabel("New label");
+        lblNewLabel.setBounds(0, 0, 635, 335);
+        lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Krzysiek\\eclipse-workspace\\Kalkulator\\Icons\\tlo.jpg"));
+        frameKalkulatorStandardowy.getContentPane().add(lblNewLabel);
+
+        textField_1 = new JTextField();
+        textField_1.setBounds(415, 225, 209, 50);
+        textField_1.setHorizontalAlignment(SwingConstants.CENTER);
+        textField_1.setColumns(10);
+        frameKalkulatorStandardowy.getContentPane().add(textField_1);
+
+
     }
+
+    public JFrame getFrameKalkulatorStandardowy() {
+        return frameKalkulatorStandardowy;
+    }
+
+    public void setFrameKalkulatorStandardowy(JFrame frameKalkulatorStandardowy) {
+        this.frameKalkulatorStandardowy = frameKalkulatorStandardowy;
+        frameKalkulatorStandardowy.getContentPane().setBackground(SystemColor.textInactiveText);
+        frameKalkulatorStandardowy.getContentPane().setForeground(Color.GRAY);
+        frameKalkulatorStandardowy.setForeground(Color.WHITE);
+        frameKalkulatorStandardowy.setBackground(Color.WHITE);
+    }
+}

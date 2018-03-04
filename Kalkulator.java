@@ -870,4 +870,40 @@ public class Kalkulator extends Wykres {
         textField2.setColumns(10);
         getFrameKalkulatorStandardowy().getContentPane().add(textField2);
 
+        JToggleButton tglbtnNewToggleButton = new JToggleButton("Wykres");
+        tglbtnNewToggleButton.setBounds(530, 280, 94, 50);
+        tglbtnNewToggleButton.setFont(new Font("Tahoma", Font.PLAIN, 11));
+        tglbtnNewToggleButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+
+                Wykres wykres = new Wykres();
+                wykres.getFrameWykres().setVisible(true);
+
+
+                if (jCombo.getSelectedItem().equals("USA")) {
+
+                    wykres.wykresUsa();
+
+                } else if (jCombo.getSelectedItem().equals("EURO")) {
+
+                    wykres.wykresEuro();
+                } else if (jCombo.getSelectedItem().equals("GBP")) {
+
+                    wykres.wykresGbp();
+                } else if (jCombo.getSelectedItem().equals("CAD")) {
+
+                    wykres.wykresCad();
+                } else if (jCombo.getSelectedItem().equals("AUD")) {
+
+                    wykres.wykresAud();
+                } else if (jCombo.getSelectedItem().equals("CHF")) {
+
+                    wykres.wykresChf();
+                } else if (jCombo.getSelectedItem().equals("HUF")) {
+                    wykres.wykresHuf();
+
+                }
+
+            }
+        });
     }

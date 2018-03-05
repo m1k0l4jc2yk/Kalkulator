@@ -10,7 +10,6 @@ public class KalkulatorTest extends Kalkulator {
 				try {
 					Kalkulator window = new Kalkulator();
 					window.getFrameKalkulatorStandardowy().setVisible(true);
-					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

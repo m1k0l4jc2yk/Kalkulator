@@ -953,5 +953,6 @@ public class Kalkulator extends Wykres {
         frameKalkulatorStandardowy.getContentPane().setForeground(Color.GRAY);
         frameKalkulatorStandardowy.setForeground(Color.WHITE);
         frameKalkulatorStandardowy.setBackground(Color.WHITE);
+
     }
 }
